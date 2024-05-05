@@ -1,0 +1,43 @@
+body {
+  @media (max-width: 500px) {
+    color: black;
+  }
+
+  @media (min-width: #{375 + 0.1px}) {
+    color: yellow;
+  }
+
+  @media (max-width: 768px) {
+    color: red;
+  }
+
+  @media (min-width: #{768 + 0.1px}) {
+    color: white;
+  }
+
+  transform: translate(50px);
+  transition: all 0.3s;
+  clip-path: var(--clip-path);
+}
+
+.wrapper {
+  @media (max-width: 500px) {
+    color: #451681;
+  }
+
+  @media (min-width: #{375 + 0.1px}) {
+    color: #055451;
+  }
+
+  @media (max-width: 768px) {
+    color: #056451;
+  }
+
+  @media (min-width: #{768 + 0.1px}) {
+    color: #852581;
+  }
+
+  transform: translate(50px);
+  transition: all 0.3s;
+  clip-path: var(--clip-path);
+}
