@@ -10,7 +10,7 @@ import replace from 'vite-plugin-filter-replace';
 export default defineConfig({
   base: "/matchapp-vite/",
   server: {
-    open: "/pages.html",
+    open: "/matchapp-vite/pages.html",
   },
   plugins: [
     injectHTML(),
@@ -37,15 +37,15 @@ export default defineConfig({
         replace: {
           from: /@img/g,
           to: "/images",
-        }
+        },
       },
-    ])
+    ]),
   ],
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "index.html"),
         pages: resolve(__dirname, "pages.html"),
+        "find-people": resolve(__dirname, "find-people/index.html"),
       },
     },
   },

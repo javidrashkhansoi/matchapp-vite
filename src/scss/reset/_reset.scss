@@ -1,0 +1,139 @@
+@use "reset/reset";
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+
+  &,
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+html,
+body {
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+
+  inline-size: 100%;
+  block-size: 100%;
+  font-size: 16px;
+  line-height: 1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+// nav,
+// footer,
+// header,
+// aside {
+//   display: block;
+// }
+
+// a[href] {
+//   &:focus-visible {
+//     outline: 2px solid var(--outline-color, currentColor);
+//     outline-offset: 2px;
+//   }
+
+//   @media (hover: hover) {
+//     &:hover {
+//       outline: none;
+//     }
+//   }
+
+//   @media (hover: none) {
+//     &:active {
+//       outline: none;
+//       opacity: 0.5;
+//     }
+//   }
+// }
+
+a {
+  color: inherit;
+
+  &,
+  &:visited,
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+@include reset.button-reset();
+// @include reset.inputs-reset();
+// @include reset.range-input-reset();
+// @include reset.textarea-reset();
+
+ul,
+ol {
+  &,
+  li {
+    list-style: none;
+  }
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+// address {
+//   font-style: normal;
+// }
+
+// dialog {
+//   position: fixed;
+//   inset: 0;
+//   z-index: 100;
+//   inline-size: 100%;
+//   block-size: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   opacity: 0;
+//   visibility: hidden;
+//   transition: 0.3s;
+//   overflow: auto;
+
+//   &[open] {
+//     opacity: 1;
+//     visibility: visible;
+//   }
+// }
+
+// .swiper {
+//   user-select: none;
+// }
+
+svg {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+mark {
+  color: inherit;
+  background: none;
+}

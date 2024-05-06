@@ -1,0 +1,71 @@
+@use "../../functions/functions";
+@use "../../variables/variables";
+
+.header {
+  position: fixed;
+  inset-block-end: 0;
+  inset-inline: 0;
+  z-index: 50;
+  font-family: variables.$font-roboto;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 0 0 rgba(117, 101, 125, 0.3);
+  border-block-start: functions.vw(0.5) solid #d2cdd4;
+
+  // .header__wrapper
+  &__wrapper {
+  }
+
+  // .header__nav
+  &__nav {
+  }
+}
+
+.header-nav {
+  // .header-nav__list
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: functions.vw(5);
+  }
+
+  // .header-nav__item
+  &__item {
+    padding: functions.vw(15);
+  }
+
+  // .header-nav__link
+  &__link {
+  }
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: functions.vw(4);
+  font-size: functions.vw(11);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  text-align: center;
+
+  // .nav-link--active
+  &--active {
+  }
+
+  // .nav-link__icon
+  &__icon {
+    flex: 0 0 auto;
+    inline-size: functions.vw(24);
+    aspect-ratio: 1 / 1;
+    font-size: 0;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  // .nav-link__text
+  &__text {
+  }
+}

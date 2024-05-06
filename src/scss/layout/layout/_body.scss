@@ -1,0 +1,14 @@
+@use "../../functions/functions";
+@use "../../variables/variables";
+
+body {
+  font-family: variables.$font-montserrat;
+  font-size: variables.$font-size;
+  line-height: variables.$line-height;
+  color: variables.$color-text;
+  background-color: #f9f9f9;
+
+  .scroll-lock & {
+    overflow: hidden;
+  }
+}

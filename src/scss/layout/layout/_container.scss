@@ -1,0 +1,6 @@
+@use "../../functions/functions";
+@use "../../variables/variables";
+
+.container {
+  padding-inline: functions.vw(16);
+}

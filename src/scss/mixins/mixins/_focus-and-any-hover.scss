@@ -1,0 +1,7 @@
+@mixin focus-and-any-hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}

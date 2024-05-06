@@ -1,0 +1,41 @@
+@mixin button-reset {
+  button {
+    font: {
+      family: inherit;
+      weight: inherit;
+      style: inherit;
+      size: inherit;
+    }
+    line-height: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+
+    &:disabled {
+      cursor: default;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--outline-color, currentColor);
+      outline-offset: 2px;
+    }
+
+    &::-moz-focus-inner {
+      padding: 0;
+      border: none;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        outline: none;
+      }
+    }
+
+    @media (hover: none) {
+      &:active {
+        outline: none;
+        opacity: 0.5;
+      }
+    }
+  }
+}

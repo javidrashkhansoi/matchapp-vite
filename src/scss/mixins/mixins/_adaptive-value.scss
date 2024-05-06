@@ -1,0 +1,29 @@
+@use "../../variables/variables";
+
+@mixin adaptive-value(
+  $property,
+  $start,
+  $finish,
+  $type,
+  $layout: variables.$layout,
+  $container: variables.container(),
+  $mobile: variables.$mobile
+) {
+  $addSize: $start - $finish;
+
+  @if $type == 1 {
+    #{$property}: $start + px;
+
+    @media (max-width: #{$container + px}) {
+      #{$property}: calc(#{$finish + px} + #{$addSize} * ((100vw - #{$mobile + px}) / #{$container - $mobile}));
+    }
+  } @else if $type == 2 {
+    #{$property}: $start + px;
+
+    @media (min-width: #{$container + px}) {
+      #{$property}: calc(#{$finish + px} + #{$addSize} * ((100vw - #{$mobile + px}) / #{$layout - $mobile}));
+    }
+  } @else {
+    #{$property}: calc(#{$finish + px} + #{$addSize} * ((100vw - #{$mobile + px}) / #{$layout - $mobile}));
+  }
+}

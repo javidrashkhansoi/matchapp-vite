@@ -1,0 +1,142 @@
+@mixin range-thumb-styles {
+  inline-size: var(--range-thumb-width, var(--range-thumb-size, 16px));
+  block-size: var(--range-thumb-height, var(--range-thumb-size, 16px));
+  background: {
+    image: var(--range-thumb-background-image);
+    color: var(--range-thumb-background-color, #0075ff);
+  }
+  border: {
+    width: var(--range-thumb-border-width, 0px);
+    style: var(--range-thumb-border-style, solid);
+    color: var(--range-thumb-border-color);
+    start: {
+      start-radius: var(--range-thumb-border-top-left-radius, var(--range-thumb-border-radius, 50%));
+      end-radius: var(--range-thumb-border-top-right-radius, var(--range-thumb-border-radius, 50%));
+    }
+    end: {
+      end-radius: var(--range-thumb-border-bottom-right-radius, var(--range-thumb-border-radius, 50%));
+      start-radius: var(--range-thumb-border-bottom-left-radius, var(--range-thumb-border-radius, 50%));
+    }
+  }
+  transition-property: var(--range-thumb-transition-property, background-color);
+  transition-duration: var(--range-thumb-transition-duration, 0.3s);
+}
+
+@mixin range-thumb-disabled-styles {
+  --range-thumb-background-color: var(--range-thumb-background-color-disabled, #cbcbcb);
+}
+
+@mixin range-thumb-focus-styles {
+  outline: {
+    width: var(--range-thumb-focus-outline-width, 2px);
+    style: var(--range-thumb-focus-outline-style, solid);
+    color: var(--range-thumb-focus-outline-color, #0075ff);
+    offset: var(--range-thumb-focus-outline-offset, 2px);
+  }
+}
+
+@mixin range-thumb-hover-styles {
+  --range-thumb-background-color: var(--range-thumb-background-color-hover, #005cc8);
+
+  cursor: var(--range-thumb-cursor, pointer);
+}
+
+@mixin range-input-reset {
+  input {
+    &:not([data-default]) {
+      &[type="range"] {
+        --range-fill-positon: calc(
+          var(--range-fill-value, 50) * 1% - (var(--range-fill-value, 50) - 50) *
+            var(--range-thumb-width, var(--range-thumb-size, 16px)) / 100
+        );
+
+        appearance: none;
+        position: var(--range-position);
+        inset: {
+          block: var(--range-top, auto) var(--range-bottom, auto);
+          inline: var(--range-left, auto) var(--range-right, auto);
+        }
+        z-index: var(--range-z-index);
+        inline-size: var(--range-width, 100%);
+        block-size: var(--range-height, 8px);
+        padding: {
+          inline: var(--range-padding-left, var(--range-padding-inline))
+            var(--range-padding-right, var(--range-padding-inline));
+        }
+        background: {
+          color: var(--range-background-color, #efefef);
+          image: linear-gradient(
+            to var(--range-fill-direction, right),
+            var(--range-fill-color, #0075ff) var(--range-fill-positon),
+            var(--range-background-color, #efefef) var(--range-fill-positon)
+          );
+        }
+        border: {
+          width: var(--range-border-width, 0px);
+          style: var(--range-border-style, solid);
+          color: var(--range-border-color);
+          start: {
+            start-radius: var(--range-border-top-left-radius, var(--range-border-radius));
+            end-radius: var(--range-border-top-right-radius, var(--range-border-radius));
+          }
+          end: {
+            end-radius: var(--range-border-bottom-right-radius, var(--range-border-radius));
+            start-radius: var(--range-border-bottom-left-radius, var(--range-border-radius));
+          }
+        }
+        transition-property: var(--range-transition-property, none);
+        transition-duration: var(--range-transition-duration, 0.3s);
+
+        &:disabled {
+          --range-fill-color: var(--range-fill-color-disabled, #cbcbcb);
+          --range-background-color: var(--range-background-color-disabled, #fafafa);
+
+          &::-webkit-slider-thumb {
+            @include range-thumb-disabled-styles();
+          }
+
+          &::-moz-range-thumb {
+            @include range-thumb-disabled-styles();
+          }
+        }
+
+        &:focus-visible {
+          &:not(:hover) {
+            &::-webkit-slider-thumb {
+              @include range-thumb-focus-styles();
+            }
+
+            &::-moz-range-thumb {
+              @include range-thumb-focus-styles();
+            }
+          }
+        }
+
+        @media (hover: hover) {
+          &:not(:disabled) {
+            &:hover {
+              --range-fill-color: var(--range-fill-color-hover);
+
+              &::-webkit-slider-thumb {
+                @include range-thumb-hover-styles();
+              }
+
+              &::-moz-range-thumb {
+                @include range-thumb-hover-styles();
+              }
+            }
+          }
+        }
+
+        &::-webkit-slider-thumb {
+          appearance: none;
+          @include range-thumb-styles();
+        }
+
+        &::-moz-range-thumb {
+          @include range-thumb-styles();
+        }
+      }
+    }
+  }
+}

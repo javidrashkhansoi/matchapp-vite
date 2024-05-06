@@ -1,0 +1,11 @@
+@use "../../functions/functions";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+
+  body:has(.header) & {
+    padding-block-end: var(--header-height, #{functions.vw(72)});
+  }
+}

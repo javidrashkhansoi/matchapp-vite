@@ -1,0 +1,80 @@
+@mixin number-input-reset {
+  &[type="number"] {
+    -moz-appearance: textfield;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+  }
+}
+
+@mixin search-input-reset {
+  &[type="search"] {
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      appearance: none;
+    }
+  }
+}
+
+@mixin inputs-reset {
+  input {
+    &:not([data-default]) {
+      inline-size: var(--input-width, 100%);
+      block-size: var(--input-height);
+      padding: {
+        inline: var(--input-padding-left, var(--input-padding-inline))
+          var(--input-padding-right, var(--input-padding-inline));
+      }
+      font: {
+        family: var(--input-font-family, inherit);
+        weight: var(--input-font-weight, inherit);
+        style: var(--input-font-style, inherit);
+        size: var(--input-font-size, inherit);
+      }
+      line-height: var(--input-line-height, 1);
+      color: var(--input-color, inherit);
+      background: {
+        color: var(--input-background-color, initial);
+      }
+      border: {
+        width: var(--input-border-width, 0px);
+        style: var(--input-border-style, solid);
+        color: var(--input-border-color);
+        start: {
+          start-radius: var(--input-border-top-left-radius, var(--input-border-radius));
+          end-radius: var(--input-border-top-right-radius, var(--input-border-radius));
+        }
+        end: {
+          end-radius: var(--input-border-bottom-right-radius, var(--input-border-radius));
+          start-radius: var(--input-border-bottom-left-radius, var(--input-border-radius));
+        }
+      }
+      caret-color: var(--input-caret-color, currentColor);
+      transition-property: var(--input-transition-property, none);
+      transition-duration: var(--input-transition-duration, 0.3s);
+
+      &:disabled {
+        --input-color: var(--input-color-disabled);
+        --input-background-color: var(--input-background-color-disabled);
+        --input-border-color: var(--input-border-color-disabled);
+      }
+
+      &:focus {
+        --input-border-color: var(--input-border-color-focus);
+      }
+
+      &::placeholder {
+        color: var(--input-placeholder-color, inherit);
+        opacity: var(--input-placeholder-opacity, 1);
+      }
+
+      @include number-input-reset();
+      @include search-input-reset();
+    }
+  }
+}

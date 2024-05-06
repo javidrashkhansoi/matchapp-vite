@@ -1,0 +1,83 @@
+@mixin textarea-reset {
+  textarea {
+    &:not([data-default]) {
+      display: var(--textarea-display, block);
+      inline-size: var(--textarea-width, var(--input-width, 100%));
+      min-block-size: var(--textarea-min-height);
+      max-block-size: var(--textarea-max-height);
+      padding: {
+        block: var(--textarea-padding-top, var(--textarea-padding-block, var(--textarea-padding)))
+          var(--textarea-padding-bottom, var(--textarea-padding-block, var(--textarea-padding)));
+        inline: var(
+            --textarea-padding-left,
+            var(
+              --textarea-padding-inline,
+              var(--textarea-padding, var(--input-padding-left, var(--input-padding-inline)))
+            )
+          )
+          var(
+            --textarea-padding-right,
+            var(
+              --textarea-padding-inline,
+              var(--textarea-padding, var(--input-padding-right, var(--input-padding-inline)))
+            )
+          );
+      }
+      font: {
+        family: var(--textarea-font-family, var(--input-font-family, inherit));
+        weight: var(--textarea-font-weight, var(--input-font-weight, inherit));
+        style: var(--textarea-font-style, var(--input-font-style, inherit));
+        size: var(--textarea-font-size, var(--input-font-size, inherit));
+      }
+      line-height: var(--textarea-line-height, inherit);
+      color: var(--textarea-color, var(--input-color, inherit));
+      background-color: var(--textarea-background-color, var(--input-background-color, initial));
+      border: {
+        width: var(--textarea-border-width, var(--input-border-width, 0px));
+        style: var(--textarea-border-style, var(--input-border-style, solid));
+        color: var(--textarea-border-color, var(--input-border-color));
+        start: {
+          start-radius: var(
+            --textarea-border-top-left-radius,
+            var(--textarea-border-radius, var(--input-border-top-left-radius, var(--input-border-radius)))
+          );
+          end-radius: var(
+            --textarea-border-top-right-radius,
+            var(--textarea-border-radius, var(--input-border-top-right-radius, var(--input-border-radius)))
+          );
+        }
+        end: {
+          end-radius: var(
+            --textarea-border-bottom-right-radius,
+            var(--textarea-border-radius, var(--input-border-bottom-right-radius, var(--input-border-radius)))
+          );
+          start-radius: var(
+            --textarea-border-bottom-left-radius,
+            var(--textarea-border-radius, var(--input-border-bottom-left-radius, var(--input-border-radius)))
+          );
+        }
+      }
+      caret-color: var(--input-caret-color, currentColor);
+      resize: var(--textarea-resize, vertical);
+      transition: {
+        property: var(--textarea-transition-property, var(--input-transition-property, none));
+        duration: var(--textarea-transition-duration, var(--input-transition-duration, 0.3s));
+      }
+
+      &:disabled {
+        --textarea-color: var(--textarea-color-disabled, var(--input-color-disabled));
+        --textarea-background-color: var(--textarea-background-color-disabled, var(--input-background-color-disabled));
+        --textarea-border-color: var(--textarea-border-color-disabled, var(--input-border-color-disabled));
+      }
+
+      &:focus {
+        --textarea-border-color: var(--textarea-border-color-focus, var(--input-border-color-focus));
+      }
+
+      &::placeholder {
+        color: var(--textarea-placeholder-color, var(--input-placeholder-color, inherit));
+        opacity: var(--textarea-placeholder-opacity, var(--input-placeholder-opacity, 1));
+      }
+    }
+  }
+}
