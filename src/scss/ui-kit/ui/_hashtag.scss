@@ -1,0 +1,18 @@
+@use "../../variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.hashtag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-block-size: vw(21);
+  padding-block: vw(5);
+  padding-inline: vw(10);
+  font-weight: 500;
+  font-size: vw(10);
+  border: vw(1) solid rgba(117, 101, 125, 0.2);
+  border-radius: vw(20);
+}

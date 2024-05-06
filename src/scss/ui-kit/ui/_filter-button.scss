@@ -1,0 +1,37 @@
+@use "../../variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.filter-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: vw(14);
+  inline-size: fit-content;
+  min-block-size: vw(24);
+  margin-inline: auto;
+  padding-block: vw(4);
+  padding-inline: vw(16);
+  font-weight: 500;
+  color: variables.$color-theme;
+  background-color: variables.$color-white;
+  box-shadow: vw(1) vw(1) vw(5) 0 rgba(117, 101, 125, 0.15);
+  border-radius: vw(30);
+
+  // .filter-button__text
+  &__text {
+  }
+
+  // .filter-button__icon
+  &__icon {
+    flex: 0 0 auto;
+    font-size: 0;
+
+    svg {
+      width: vw(16);
+      height: vw(16);
+    }
+  }
+}

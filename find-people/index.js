@@ -1,4 +1,5 @@
 import "../src/scss/global.scss";
+import "../src/scss/ui-kit/_find-people.scss";
 import "./style.scss";
 import { header } from "../src/header/index.js";
 

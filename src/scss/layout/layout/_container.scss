@@ -1,6 +1,9 @@
-@use "../../functions/functions";
 @use "../../variables/variables";
 
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
 .container {
-  padding-inline: functions.vw(16);
+  padding-inline: vw(16);
 }

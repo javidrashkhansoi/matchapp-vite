@@ -1,4 +1,6 @@
-@use "../../functions/functions";
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
 
 .main {
   display: flex;
@@ -6,6 +8,6 @@
   flex: 1 1 auto;
 
   body:has(.header) & {
-    padding-block-end: var(--header-height, #{functions.vw(72)});
+    padding-block-end: var(--header-height, #{vw(72)});
   }
 }

@@ -1,33 +1,15 @@
-@use "../../functions/functions";
 @use "../../variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
 
 .people-name {
   font-weight: 500;
-  font-size: functions.vw(16);
+  font-size: vw(16);
   line-height: 1;
 }
 
 .people-type {
   color: variables.$color-theme;
-}
-
-.compatilibity-progress {
-  position: relative;
-  flex: 1 1 auto;
-  block-size: 10px;
-  font-size: 0;
-  background-color: #f9f9f9;
-  border-radius: functions.vw(10);
-  overflow: hidden;
-
-  &::after {
-    content: "";
-    position: absolute;
-    inset-block: 0;
-    inset-inline-start: 0;
-    inline-size: var(--progress);
-    block-size: 100%;
-    background: #ace39c;
-    border-radius: inherit;
-  }
 }

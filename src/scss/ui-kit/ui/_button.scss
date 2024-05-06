@@ -1,0 +1,20 @@
+@use "../../variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inline-size: var(--button-width, 100%);
+  min-block-size: var(--button-height, #{vw(42)});
+  padding: var(--button-padding, #{vw(13)});
+  font-weight: var(--button-font-weight, 500);
+  font-size: var(--button-font-size, #{vw(14)});
+  color: var(--button-color, #{variables.$color-theme});
+  background-color: var(--button-background-color, #{variables.$color-white});
+  box-shadow: var(--button-shadow, #{vw(1) vw(1) vw(10) 0 rgba(117, 101, 125, 0.15)});
+  border-radius: var(--button-border-radius, #{vw(30)});
+}

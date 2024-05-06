@@ -1,0 +1,24 @@
+@use "../../variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.remove {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  inline-size: vw(42);
+  aspect-ratio: 1 / 1;
+  font-size: 0;
+  color: variables.$color-theme;
+  background-color: variables.$color-white;
+  box-shadow: vw(1) vw(1) vw(5) 0 rgba(117, 101, 125, 0.15);
+  border-radius: 50%;
+
+  svg {
+    width: vw(16);
+    height: vw(16);
+  }
+}

@@ -1,0 +1,23 @@
+@use "../../variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.like {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 auto;
+  inline-size: vw(42);
+  aspect-ratio: 1 / 1;
+  font-size: 0;
+  color: variables.$color-theme;
+  border: vw(1) solid;
+  border-radius: 50%;
+
+  svg {
+    width: vw(17);
+    height: vw(17);
+  }
+}
