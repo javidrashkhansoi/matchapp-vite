@@ -36,6 +36,22 @@
   &__date {
   }
 
+  // .editing-main__calendar
+  &__calendar {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    opacity: 0;
+
+    &::-webkit-calendar-picker-indicator {
+      position: absolute;
+      inset: 0;
+      inline-size: 100%;
+      block-size: 100%;
+      z-index: 1;
+    }
+  }
+
   // .editing-main__radios
   &__radios {
   }

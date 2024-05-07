@@ -44,10 +44,17 @@
   justify-content: space-between;
   align-items: center;
   font-size: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' width='72' height='2'%3E%3Cpath stroke='%2375657D' stroke-dasharray='2 4' stroke-width='.5' d='M0 1h72'/%3E%3C/svg%3E");
-  background-repeat: repeat-x;
-  background-size: vw(72) vw(2);
-  background-position: center;
+
+  &:not(&--bg-none) {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' width='72' height='2'%3E%3Cpath stroke='%2375657D' stroke-dasharray='2 4' stroke-width='.5' d='M0 1h72'/%3E%3C/svg%3E");
+    background-repeat: repeat-x;
+    background-size: vw(72) vw(2);
+    background-position: center;
+  }
+
+  // .rate--bg-none
+  &--bg-none {
+  }
 
   // .rate__item
   &__item {
@@ -72,9 +79,53 @@
         aspect-ratio: 1 / 1;
         background-color: #d0bcf2;
         border-radius: 50%;
+        filter: blur(5px);
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  // .rate__radio
+  &__radio {
+  }
+}
+
+.rate-radio {
+  flex: 0 0 auto;
+
+  // .rate-radio__label
+  &__label {
+    position: relative;
+    isolation: isolate;
+    display: block;
+    inline-size: vw(61);
+    aspect-ratio: 1 / 1;
+    background-color: variables.$color-white;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 31 31'%3E%3Ccircle cx='15.5' cy='15.5' r='15.25' stroke='%2375657D' stroke-dasharray='2 4' stroke-width='.5' transform='rotate(90 15.5 15.5)'/%3E%3C/svg%3E");
+    border-radius: 50%;
+
+    .rate-radio:has(.rate-radio__input:checked) & {
+      &::after {
+        content: "";
+        position: absolute;
+        inset-block-start: 50%;
+        inset-inline-start: 50%;
+        z-index: 1;
+        inline-size: vw(41);
+        aspect-ratio: 1 / 1;
+        background-color: #d0bcf2;
+        border-radius: 50%;
         filter: blur(10px);
         transform: translate(-50%, -50%);
       }
     }
+  }
+
+  // .rate-radio__icon
+  &__icon {
+  }
+
+  // .rate-radio__input
+  &__input {
   }
 }

@@ -1,0 +1,57 @@
+@use "../../variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.checkbox-toggle {
+  // .checkbox-toggle__label
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: vw(8);
+    font-size: vw(14);
+    line-height: 1;
+  }
+
+  // .checkbox-toggle__text
+  &__text {
+  }
+
+  // .checkbox-toggle__icon
+  &__icon {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    inline-size: vw(48);
+    aspect-ratio: 48 / 24;
+    padding-inline: vw(2);
+    font-size: 0;
+    background-color: #f5f5f5;
+    border: vw(1) solid rgba(117, 101, 125, 0.2);
+    border-radius: vw(30);
+
+    &::after {
+      content: "";
+      flex: 0 0 auto;
+      inline-size: vw(20);
+      aspect-ratio: 1 / 1;
+      background-color: variables.$color-white;
+      border: vw(0.5) solid rgba(117, 101, 125, 0.2);
+      border-radius: 50%;
+    }
+
+    .checkbox-toggle:has(.checkbox-toggle__input:checked) & {
+      background-color: variables.$color-theme;
+
+      &::after {
+        margin-inline-start: auto;
+      }
+    }
+  }
+
+  // .checkbox-toggle__input
+  &__input {
+  }
+}

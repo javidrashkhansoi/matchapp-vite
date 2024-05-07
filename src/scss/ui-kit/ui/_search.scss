@@ -1,0 +1,52 @@
+@use "../../variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.search-input {
+  position: relative;
+
+  // .search-input__icon
+  &__icon {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: vw(32);
+    z-index: 1;
+    font-size: 0;
+    color: rgba($color: #060606, $alpha: 0.4);
+    transform: translateY(-50%);
+    pointer-events: none;
+
+    .search-input:has(.search-input__item:not(:placeholder-shown)) & {
+      color: inherit;
+    }
+
+    svg {
+      width: vw(30);
+      height: vw(31);
+    }
+  }
+
+  // .search-input__item
+  &__item {
+    inline-size: 100%;
+    block-size: vw(56);
+    padding-inline: vw(54) vw(16);
+    font-size: vw(14);
+    background-color: #f9f9f9;
+    border-radius: vw(10);
+
+    &::placeholder {
+      color: rgba($color: #060606, $alpha: 0.4);
+      opacity: 1;
+    }
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      appearance: none;
+    }
+  }
+}

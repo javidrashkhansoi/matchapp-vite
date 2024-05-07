@@ -1,0 +1,106 @@
+@use "../../variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.filter {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  background-color: variables.$color-white;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &:not(&--show) {
+    visibility: hidden;
+  }
+
+  // .filter--show
+  &--show {
+    body:has(&) {
+      overflow: hidden;
+    }
+  }
+
+  // .filter__header
+  &__header {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: vw(84) 1fr vw(84);
+    align-items: center;
+    gap: vw(16);
+    min-block-size: vw(54);
+    margin-block-end: vw(7);
+    padding-inline: vw(16);
+    background-color: variables.$color-white;
+
+    &::before {
+      content: "";
+    }
+  }
+
+  // .filter__title
+  &__title {
+    font-size: vw(18);
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  // .filter__reset
+  &__reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-block-size: vw(24);
+    padding-block: vw(5);
+    padding-inline: vw(16);
+    font-weight: 500;
+    color: variables.$color-theme;
+    background-color: variables.$color-white;
+    box-shadow: vw(1) vw(1) vw(5) 0 rgba(117, 101, 125, 0.15);
+    border-radius: vw(30);
+  }
+
+  // .filter__inner
+  &__inner {
+    flex: 1 1 auto;
+  }
+
+  // .filter__item
+  &__item {
+    &:not(:last-child) {
+      margin-block-end: vw(35);
+    }
+
+    .search-input {
+      padding-inline: vw(16);
+    }
+
+    .checkboxes__item {
+      padding-inline: vw(16);
+    }
+
+    .checkbox-buttons {
+      padding-inline: vw(16);
+    }
+  }
+
+  // .filter__bottom
+  &__bottom {
+    position: sticky;
+    inset-block-end: 0;
+    z-index: 1;
+    padding-block: vw(16) vw(48);
+    padding-inline: vw(16);
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), variables.$color-white 50%);
+  }
+
+  // .filter__submit
+  &__submit {
+  }
+}

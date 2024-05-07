@@ -13,15 +13,20 @@
   border: vw(0.5) solid rgba(117, 101, 125, 0.2);
   border-radius: vw(10);
 
-  &:disabled {
-    background-color: #f5f5f5;
-  }
-
   // .input--flex
   &--flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
     column-gap: vw(16);
+  }
+
+  &:disabled {
+    background-color: #f5f5f5;
+  }
+
+  &::placeholder {
+    color: rgba($color: #060606, $alpha: 0.4);
+    opacity: 1;
   }
 }

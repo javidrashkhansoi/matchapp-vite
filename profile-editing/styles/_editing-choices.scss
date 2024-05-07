@@ -14,7 +14,6 @@
   // .editing-choices__item
   &__item {
     padding-block: vw(32);
-    padding-inline: vw(16);
     border-block-start: vw(0.5) solid rgba(117, 101, 125, 0.2);
 
     &:last-child {
@@ -24,12 +23,37 @@
 
   // .editing-choices__title
   &__title {
-    margin-block-end: vw(16);
-    font-weight: 600;
-    font-size: 14px;
+    margin-block-end: vw(8);
+    padding-inline: vw(16);
+
+    &:not(.label-small) {
+      margin-block-end: vw(16);
+      font-weight: 600;
+      font-size: vw(14);
+    }
   }
 
-  // .editing-main__radios
+  // .editing-choices__radios
   &__radios {
+    .radios__item {
+      padding-inline: vw(16);
+    }
+  }
+
+  // .editing-choices__checkboxes
+  &__checkboxes {
+    .checkboxes__item {
+      padding-inline: vw(16);
+    }
+  }
+
+  // .editing-choices__feedback
+  &__feedback {
+    padding-inline: vw(16);
+  }
+
+  // .editing-choices__selected
+  &__selected {
+    padding-inline: vw(16);
   }
 }

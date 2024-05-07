@@ -1,0 +1,89 @@
+<fieldset class="filter" data-filter="goals">
+  <legend class="visually-hidden">Goals</legend>
+  <div class="filter__header">
+    <div class="filter__title" aria-hidden="true">Goals</div>
+    <button class="filter__reset" type="button">Reset all</button>
+  </div>
+  <div class="filter__inner">
+    <div class="filter__item">
+      <div class="filter__checkboxes checkboxes">
+        <div class="checkboxes__item checkbox">
+          <label class="checkbox__label" for="goal-encounters">
+            <span class="checkbox__icon" aria-hidden="true">
+              <svg width="15" height="12">
+                <use xlink:href="#check"></use>
+              </svg>
+            </span>
+            <span class="checkbox__text">Interesting encounters</span>
+          </label>
+          <input class="checkbox__input visually-hidden" id="goal-encounters" name="goal-encounters" type="checkbox" value="#">
+        </div>
+        <div class="checkboxes__item checkbox">
+          <label class="checkbox__label" for="goal-flirting">
+            <span class="checkbox__icon" aria-hidden="true">
+              <svg width="15" height="12">
+                <use xlink:href="#check"></use>
+              </svg>
+            </span>
+            <span class="checkbox__text">Dates and flirting</span>
+          </label>
+          <input class="checkbox__input visually-hidden" id="goal-flirting" name="goal-flirting" type="checkbox" value="#" checked>
+        </div>
+        <div class="checkboxes__item checkbox">
+          <label class="checkbox__label" for="goal-relationships">
+            <span class="checkbox__icon" aria-hidden="true">
+              <svg width="15" height="12">
+                <use xlink:href="#check"></use>
+              </svg>
+            </span>
+            <span class="checkbox__text">Long-term relationships</span>
+          </label>
+          <input class="checkbox__input visually-hidden" id="goal-relationships" name="goal-relationships" type="checkbox" value="#">
+        </div>
+        <div class="checkboxes__item checkbox">
+          <label class="checkbox__label" for="goal-family">
+            <span class="checkbox__icon" aria-hidden="true">
+              <svg width="15" height="12">
+                <use xlink:href="#check"></use>
+              </svg>
+            </span>
+            <span class="checkbox__text">Starting a family</span>
+          </label>
+          <input class="checkbox__input visually-hidden" id="goal-family" name="goal-family" type="checkbox" value="#">
+        </div>
+        <div class="checkboxes__item checkbox">
+          <label class="checkbox__label" for="goal-children">
+            <span class="checkbox__icon" aria-hidden="true">
+              <svg width="15" height="12">
+                <use xlink:href="#check"></use>
+              </svg>
+            </span>
+            <span class="checkbox__text">Having children</span>
+          </label>
+          <input class="checkbox__input visually-hidden" id="goal-children" name="goal-children" type="checkbox" value="#">
+        </div>
+        <div class="checkboxes__item checkbox">
+          <label class="checkbox__label" for="goal-meet">
+            <span class="checkbox__icon" aria-hidden="true">
+              <svg width="15" height="12">
+                <use xlink:href="#check"></use>
+              </svg>
+            </span>
+            <span class="checkbox__text">I'll decide when I meet</span>
+          </label>
+          <input class="checkbox__input visually-hidden" id="goal-meet" name="goal-meet" type="checkbox" value="#">
+        </div>
+        <div class="checkboxes__item checkbox-toggle">
+          <label class="checkbox-toggle__label" for="goal-show">
+            <span class="checkbox-toggle__text">Do not show in profile</span>
+            <span class="checkbox-toggle__icon" aria-hidden="true"></span>
+          </label>
+          <input class="checkbox-toggle__input visually-hidden" id="goal-show" name="goal-show" type="checkbox" value="#">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="filter__bottom">
+    <button class="filter__submit button" type="button">Apply</button>
+  </div>
+</fieldset>

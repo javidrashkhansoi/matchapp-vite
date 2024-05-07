@@ -7,8 +7,40 @@
 .editing {
   padding-block-end: vw(48);
 
+  // .editing__title
+  &__title {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 1;
+    margin-block-end: vw(8);
+    padding-block: vw(13);
+    padding-inline: vw(16);
+    font-size: vw(18);
+    line-height: 1.2;
+    text-align: center;
+    background-color: variables.$color-white;
+  }
+
   // .editing__form
   &__form {
+  }
+
+  // .editing__bottom
+  &__bottom {
+    padding-block-start: vw(40);
+    padding-inline: 16px;
+  }
+
+  // .editing__button
+  &__button {
+    --button-width: fit-content;
+    --button-padding: #{vw(16)};
+
+    margin-inline-start: auto;
+  }
+
+  // .editing__dialog
+  &__dialog {
   }
 }
 
@@ -22,20 +54,6 @@
 .editing-hero {
   // .editing-hero__container
   &__container {
-  }
-
-  // .editing-hero__title
-  &__title {
-    position: sticky;
-    inset-block-start: 0;
-    z-index: 1;
-    margin-block-end: vw(8);
-    padding-block: vw(13);
-    padding-inline: vw(16);
-    font-size: vw(18);
-    line-height: 1.2;
-    text-align: center;
-    background-color: #f9f9f9;
   }
 
   // .editing-hero__images

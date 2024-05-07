@@ -1,7 +1,23 @@
 <section class="editing">
+  <h1 class="editing__title">Profile editing</h1>
   <form class="editing__form editing-form" id="editing-form" action="#" method="post" enctype="multipart/form-data">
     <load src="profile-editing/blocks/editing-hero.html" />
     <load src="profile-editing/blocks/editing-main.html" />
     <load src="profile-editing/blocks/editing-choices.html" />
+    <load src="profile-editing/blocks/editing-button.html" />
   </form>
+  <div class="editing__dialog dialog">
+    <div class="dialog__inner">
+      <button class="dialog__close">
+        <svg width="16" height="16" aria-hidden="true">
+          <use xlink:href="#remove"></use>
+        </svg>
+      </button>
+      <h2 class="dialog__title">Are you sure you want to quit without saving?</h2>
+      <div class="dialog__buttons">
+        <button class="dialog__button button">No, stay on the page</button>
+        <button class="dialog__button dialog__button--red button">Yes, quit</button>
+      </div>
+    </div>
+  </div>
 </section>

@@ -15,7 +15,7 @@
         </span>
       </span>
     </label>
-    <input class="visually-hidden" id="editing-main-date" name="editing-main-date" type="date" value="2012-12-12" disabled>
+    <input class="editing-main__calendar" id="editing-main-date" name="editing-main-date" type="date" value="2012-12-12" disabled>
   </div>
   <fieldset class="editing-main__item">
     <legend class="editing-main__label label-small">Your gender</legend>
@@ -49,7 +49,7 @@
   </div>
   <fieldset class="editing-main__item">
     <legend class="editing-main__label label-small">Which languages do you speak</legend>
-    <div class="editing-main__selected editing-selected input input--flex">
+    <div class="editing-main__selected editing-selected input input--flex" data-filter-trigger="languages">
       <div class="editing-selected__inner">
         <button class="editing-selected__button editing-choice" type="button">
           <span class="editing-choice__text">Russian</span>
@@ -74,10 +74,11 @@
         </svg>
       </span>
     </div>
+    <load src="profile-editing/blocks/language-filter.html" />
   </fieldset>
   <fieldset class="editing-main__item">
     <legend class="editing-main__label label-small">Goals</legend>
-    <div class="editing-main__selected editing-selected input input--flex">
+    <div class="editing-main__selected editing-selected input input--flex" data-filter-trigger="goals">
       <div class="editing-selected__inner">
         <button class="editing-selected__button editing-choice" type="button">
           <span class="editing-choice__text">Interesting encounters</span>
@@ -95,11 +96,12 @@
         </svg>
       </span>
     </div>
+    <load src="profile-editing/blocks/goals-filter.html" />
   </fieldset>
   <div class="editing-main__item">
-    <label class="editing-main__select editing-select " for="editing-select">
+    <label class="editing-main__select editing-select" for="editing-select">
       <span class="editing-select__label label-small">Preferences</span>
-      <div class="editing-select__input input input--flex">
+      <div class="editing-select__input input input--flex" aria-hidden="true">
         <div class="editing-select__text">Both (Man&Woman)</div>
         <span class="editing-select__icon" aria-hidden="true">
           <svg width="10" height="6">
@@ -116,7 +118,7 @@
   </div>
   <fieldset class="editing-main__item">
     <legend class="editing-main__label label-small">Values</legend>
-    <div class="editing-main__selected editing-selected input input--flex">
+    <div class="editing-main__selected editing-selected input input--flex" data-filter-trigger="values">
       <div class="editing-selected__inner">
         <button class="editing-selected__button editing-choice" type="button">
           <span class="editing-choice__text">Health</span>
@@ -142,5 +144,6 @@
         </svg>
       </span>
     </div>
+    <load src="profile-editing/blocks/values-filter.html" />
   </fieldset>
 </div>

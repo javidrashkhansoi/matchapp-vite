@@ -8,6 +8,7 @@
   // .radios--flex
   &--flex {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     row-gap: vw(12);
     column-gap: vw(24);
