@@ -1,0 +1,37 @@
+@use "../../variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: vw(6);
+  column-gap: vw(12);
+
+  // .languages__item
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: vw(8);
+    font-weight: 500;
+  }
+
+  // .languages__icon
+  &__icon {
+    flex: 0 0 auto;
+    inline-size: vw(24);
+    aspect-ratio: 1 / 1;
+    font-size: 0;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  // .languages__text
+  &__text {
+  }
+}

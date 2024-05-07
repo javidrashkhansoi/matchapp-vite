@@ -1,0 +1,27 @@
+@use "../../variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: vw(3);
+  padding-inline: vw(8);
+
+  // .pagination__bullet
+  &__bullet {
+    flex: 1 1 auto;
+    block-size: vw(2);
+    font-size: 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: vw(10);
+
+    // .pagination__bullet--active
+    &--active {
+      background-color: variables.$color-white;
+    }
+  }
+}

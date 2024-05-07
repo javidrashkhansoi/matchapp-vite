@@ -1,0 +1,18 @@
+@use "../../src/scss/variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.person-report {
+  padding-block: vw(20) vw(24);
+
+  // .person-report__container
+  &__container {
+  }
+
+  // .person-report__button
+  &__button {
+    --button-color: #ee5959;
+  }
+}

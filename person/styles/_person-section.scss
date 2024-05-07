@@ -1,0 +1,46 @@
+@use "../../src/scss/variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.person-section {
+  padding-block: vw(4);
+
+  // .person-section__inner
+  &__inner {
+    padding-block: vw(24);
+    background-color: variables.$color-white;
+    border: vw(0.5) solid rgba(117, 101, 125, 0.2);
+    border-radius: vw(10);
+  }
+
+  // .person-section__container
+  &__container {
+  }
+
+  // .person-section__title
+  &__title {
+    margin-block-end: vw(16);
+  }
+
+  // .person-section__hashtags
+  &__hashtags {
+    --hashtag-height: #{vw(24)};
+    --hashtag-padding: #{vw(16)};
+    --hashtag-font-size: #{vw(12)};
+  }
+
+  // .person-section__text
+  &__text {
+  }
+
+  // .person-section__feedback
+  &__feedback {
+  }
+
+  // .person-section__more
+  &__more {
+    margin-block-start: vw(24);
+  }
+}

@@ -1,0 +1,27 @@
+@use "../../variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.zodiac {
+  display: flex;
+  align-items: center;
+  column-gap: vw(8);
+  font-weight: 500;
+
+  // .zodiac__icon
+  &__icon {
+    flex: 0 0 auto;
+    font-size: 0;
+
+    svg {
+      width: vw(24);
+      height: vw(24);
+    }
+  }
+
+  // .zodiac__text
+  &__text {
+  }
+}

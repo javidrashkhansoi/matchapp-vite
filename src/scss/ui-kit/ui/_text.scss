@@ -1,0 +1,14 @@
+@use "../../variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.text {
+  font-size: vw(14);
+  line-height: 1.35;
+
+  > *:not(:last-child) {
+    margin-block-end: 1em;
+  }
+}

@@ -46,6 +46,7 @@ export default defineConfig({
       input: {
         pages: resolve(__dirname, "pages.html"),
         "find-people": resolve(__dirname, "find-people/index.html"),
+        person: resolve(__dirname, "person/index.html"),
       },
     },
   },
