@@ -1,0 +1,11 @@
+@use "../../variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.label-small {
+  display: block;
+  line-height: 1;
+  color: #75657d;
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="calendar" viewBox="0 0 24 24" fill="none">
+    <rect width="21" height="21" x="1.5" y="1.5" rx="1.5" />
+    <path d="M1 7.76h22" />
+    <path stroke-linecap="round" d="M6.5 3.5v-3M5.13 14.12h5.5m-5.5 2.82h9.62M17.5 3.5v-3" />
+  </symbol>
+  <symbol id="camera" viewBox="0 0 24 20" stroke="none">
+    <path fill-rule="evenodd" clip-rule="evenodd"
+      d="M8 1a1 1 0 0 0-1 1 2 2 0 0 1-2 2H2a1 1 0 0 0-1 1v12.5a1 1 0 0 0 1 1h20a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-3a2 2 0 0 1-2-2 1 1 0 0 0-1-1H8ZM6 2c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2 1 1 0 0 0 1 1h3a2 2 0 0 1 2 2v12.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3a1 1 0 0 0 1-1Z" />
+    <path fill-rule="evenodd" d="M12 14a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm0 1a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z" clip-rule="evenodd" />
+  </symbol>
+  <symbol id="down" viewBox="0 0 10 6" stroke="none">
+    <path
+      d="M5 6a.5.5 0 0 0 .38-.17L9.84.96c.1-.1.16-.24.16-.4C10 .25 9.78 0 9.48 0a.53.53 0 0 0-.38.17L5 4.63.9.17A.54.54 0 0 0 .52 0C.22 0 0 .25 0 .56c0 .16.05.3.15.4l4.47 4.87c.1.11.24.17.38.17Z" />
+  </symbol>
+  <symbol id="remove" viewBox="0 0 16 16" stroke="none">
+    <path
+      d="M1.53.7a.83.83 0 0 0-.59.24.82.82 0 0 0 0 1.17l5.89 5.9-5.89 5.88a.82.82 0 0 0 0 1.17c.33.33.85.33 1.17 0l5.9-5.89 5.88 5.9c.33.32.85.32 1.17 0a.82.82 0 0 0 0-1.18L9.17 8l5.9-5.89a.82.82 0 0 0 0-1.17.83.83 0 0 0-.6-.24.83.83 0 0 0-.58.24L8 6.84 2.11.93A.83.83 0 0 0 1.53.7Z" />
+  </symbol>
+</svg>

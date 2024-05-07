@@ -1,0 +1,71 @@
+@use "../../variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.radios {
+  // .radios--flex
+  &--flex {
+    display: flex;
+    align-items: center;
+    row-gap: vw(12);
+    column-gap: vw(24);
+  }
+
+  // .radios__item
+  &__item {
+    .radios:not(.radios--flex) & {
+      &:not(:last-child) {
+        margin-block-end: vw(12);
+      }
+    }
+  }
+}
+
+.radio {
+  // .radio__label
+  &__label {
+    display: flex;
+    align-items: center;
+    column-gap: vw(8);
+    font-weight: 500;
+  }
+
+  // .radio__icon
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 auto;
+    inline-size: vw(24);
+    aspect-ratio: 1 / 1;
+    font-size: 0;
+    border: vw(1) solid rgba(117, 101, 125, 0.2);
+    border-radius: 50%;
+
+    &::after {
+      content: "";
+      flex: 0 0 auto;
+      inline-size: vw(16);
+      aspect-ratio: 1 / 1;
+      border-radius: inherit;
+    }
+
+    .radio:has(.radio__input:checked) & {
+      border-color: variables.$color-theme;
+
+      &::after {
+        background-color: variables.$color-theme;
+      }
+    }
+  }
+
+  // .radio__text
+  &__text {
+  }
+
+  // .radio__input
+  &__input {
+  }
+}

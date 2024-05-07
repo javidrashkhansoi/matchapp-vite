@@ -1,0 +1,146 @@
+<div class="editing__main editing-main">
+  <div class="editing-main__item">
+    <label class="editing-main__label label-small" for="editing-main-name">Name</label>
+    <input class="editing-main__input input" id="editing-main-name" name="editing-main-name" type="text" inputmode="text" value="Vadim Kuznetsov" disabled>
+  </div>
+  <div class="editing-main__item">
+    <label class="editing-main__date editing-date" for="editing-main-date">
+      <span class="editing-date__label label-small">Name</span>
+      <span class="editing-date__input input input--flex" aria-hidden="true">
+        <span class="editing-date__text">12.12.12</span>
+        <span class="editing-date__icon" aria-hidden="true">
+          <svg width="24" height="24">
+            <use xlink:href="#calendar"></use>
+          </svg>
+        </span>
+      </span>
+    </label>
+    <input class="visually-hidden" id="editing-main-date" name="editing-main-date" type="date" value="2012-12-12" disabled>
+  </div>
+  <fieldset class="editing-main__item">
+    <legend class="editing-main__label label-small">Your gender</legend>
+    <div class="editing-main__radios radios radios--flex">
+      <div class="radios__item radio">
+        <label class="radio__label" for="radio-gender-man">
+          <span class="radio__icon"></span>
+          <span class="radio__text">Man</span>
+        </label>
+        <input class="radio__input visually-hidden" id="radio-gender-man" name="gender" type="radio" value="#" checked>
+      </div>
+      <div class="radios__item radio">
+        <label class="radio__label" for="radio-gender-woman">
+          <span class="radio__icon"></span>
+          <span class="radio__text">Woman</span>
+        </label>
+        <input class="radio__input visually-hidden" id="radio-gender-woman" name="gender" type="radio" value="#">
+      </div>
+      <div class="radios__item radio">
+        <label class="radio__label" for="radio-gender-other">
+          <span class="radio__icon"></span>
+          <span class="radio__text">Other</span>
+        </label>
+        <input class="radio__input visually-hidden" id="radio-gender-other" name="gender" type="radio" value="#">
+      </div>
+    </div>
+  </fieldset>
+  <div class="editing-main__item">
+    <label class="editing-main__label label-small" for="editing-main-city">City</label>
+    <input class="editing-main__input input" id="editing-main-city" name="editing-main-city" type="text" inputmode="text" value="Moscow">
+  </div>
+  <fieldset class="editing-main__item">
+    <legend class="editing-main__label label-small">Which languages do you speak</legend>
+    <div class="editing-main__selected editing-selected input input--flex">
+      <div class="editing-selected__inner">
+        <button class="editing-selected__button editing-choice" type="button">
+          <span class="editing-choice__text">Russian</span>
+          <span class="editing-choice__icon" aria-hidden="true">
+            <svg width="5" height="5">
+              <use xlink:href="#remove"></use>
+            </svg>
+          </span>
+        </button>
+        <button class="editing-selected__button editing-choice" type="button">
+          <span class="editing-choice__text">English</span>
+          <span class="editing-choice__icon" aria-hidden="true">
+            <svg width="5" height="5">
+              <use xlink:href="#remove"></use>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <span class="editing-selected__icon" aria-hidden="true">
+        <svg width="10" height="6">
+          <use xlink:href="#down"></use>
+        </svg>
+      </span>
+    </div>
+  </fieldset>
+  <fieldset class="editing-main__item">
+    <legend class="editing-main__label label-small">Goals</legend>
+    <div class="editing-main__selected editing-selected input input--flex">
+      <div class="editing-selected__inner">
+        <button class="editing-selected__button editing-choice" type="button">
+          <span class="editing-choice__text">Interesting encounters</span>
+          <span class="editing-choice__icon" aria-hidden="true">
+            <svg width="5" height="5">
+              <use xlink:href="#remove"></use>
+            </svg>
+          </span>
+        </button>
+        <div class="editing-selected__counter">+2</div>
+      </div>
+      <span class="editing-selected__icon" aria-hidden="true">
+        <svg width="10" height="6">
+          <use xlink:href="#down"></use>
+        </svg>
+      </span>
+    </div>
+  </fieldset>
+  <div class="editing-main__item">
+    <label class="editing-main__select editing-select " for="editing-select">
+      <span class="editing-select__label label-small">Preferences</span>
+      <div class="editing-select__input input input--flex">
+        <div class="editing-select__text">Both (Man&Woman)</div>
+        <span class="editing-select__icon" aria-hidden="true">
+          <svg width="10" height="6">
+            <use xlink:href="#down"></use>
+          </svg>
+        </span>
+      </div>
+    </label>
+    <select class="editing-main__selects" id="editing-select" name="editing-select">
+      <option value="#" selected>Both (Man&Woman)</option>
+      <option value="#">Man</option>
+      <option value="#">Woman</option>
+    </select>
+  </div>
+  <fieldset class="editing-main__item">
+    <legend class="editing-main__label label-small">Values</legend>
+    <div class="editing-main__selected editing-selected input input--flex">
+      <div class="editing-selected__inner">
+        <button class="editing-selected__button editing-choice" type="button">
+          <span class="editing-choice__text">Health</span>
+          <span class="editing-choice__icon" aria-hidden="true">
+            <svg width="5" height="5">
+              <use xlink:href="#remove"></use>
+            </svg>
+          </span>
+        </button>
+        <button class="editing-selected__button editing-choice" type="button">
+          <span class="editing-choice__text">Closeness</span>
+          <span class="editing-choice__icon" aria-hidden="true">
+            <svg width="5" height="5">
+              <use xlink:href="#remove"></use>
+            </svg>
+          </span>
+        </button>
+        <div class="editing-selected__counter">+1</div>
+      </div>
+      <span class="editing-selected__icon" aria-hidden="true">
+        <svg width="10" height="6">
+          <use xlink:href="#down"></use>
+        </svg>
+      </span>
+    </div>
+  </fieldset>
+</div>

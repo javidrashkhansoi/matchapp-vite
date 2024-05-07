@@ -1,0 +1,128 @@
+@use "../../src/scss/variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.editing {
+  padding-block-end: vw(48);
+
+  // .editing__form
+  &__form {
+  }
+}
+
+.editing-form {
+  // .editing-form__hero
+  &__hero {
+    margin-block-end: vw(40);
+  }
+}
+
+.editing-hero {
+  // .editing-hero__container
+  &__container {
+  }
+
+  // .editing-hero__title
+  &__title {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 1;
+    margin-block-end: vw(8);
+    padding-block: vw(13);
+    padding-inline: vw(16);
+    font-size: vw(18);
+    line-height: 1.2;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+
+  // .editing-hero__images
+  &__images {
+  }
+}
+
+.editing-images {
+  // .editing-images__main
+  &__main {
+    inline-size: vw(343);
+    aspect-ratio: 343 / 358;
+    margin-block-end: vw(8);
+    margin-inline: auto;
+    padding: vw(16);
+    font-size: 0;
+    border: vw(0.5) solid rgba(117, 101, 125, 0.2);
+    border-radius: vw(10);
+  }
+
+  // .editing-images__remove
+  &__remove {
+    margin-inline-start: auto;
+  }
+
+  // .editing-images__thumbs
+  &__thumbs {
+  }
+}
+
+.editing-remove {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inline-size: vw(24);
+  aspect-ratio: 1 / 1;
+  color: variables.$color-theme;
+  background-color: variables.$color-white;
+  box-shadow: vw(1) vw(1) vw(5) 0 rgba(117, 101, 125, 0.15);
+  border-radius: 50%;
+
+  svg {
+    width: vw(8);
+    height: vw(8);
+  }
+}
+
+.editing-thumbs {
+  display: flex;
+  column-gap: vw(8);
+  padding-inline: vw(16);
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  // .editing-thumbs__image
+  &__image {
+    flex: 0 0 auto;
+    inline-size: vw(109);
+    aspect-ratio: 1 / 1;
+    font-size: 0;
+    border-radius: vw(10);
+  }
+
+  // .editing-thumbs__label
+  &__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    block-size: 100%;
+    color: variables.$color-theme;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 109 109'%3E%3Crect width='108.5' height='108.5' x='.25' y='.25' stroke='%2375657D' stroke-dasharray='4 6' stroke-width='.5' rx='9.75'/%3E%3C/svg%3E");
+
+    > svg {
+      width: vw(24);
+      height: vw(19);
+    }
+  }
+
+  // .editing-thumbs__input
+  &__input {
+  }
+
+  // .editing-thumbs__remove
+  &__remove {
+    position: absolute;
+    inset-block-start: vw(8);
+    inset-inline-end: vw(8);
+    z-index: 1;
+  }
+}

@@ -1,0 +1,35 @@
+@use "../../src/scss/variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.editing {
+  // .editing__choices
+  &__choices {
+  }
+}
+
+.editing-choices {
+  // .editing-choices__item
+  &__item {
+    padding-block: vw(32);
+    padding-inline: vw(16);
+    border-block-start: vw(0.5) solid rgba(117, 101, 125, 0.2);
+
+    &:last-child {
+      padding-block-end: 0;
+    }
+  }
+
+  // .editing-choices__title
+  &__title {
+    margin-block-end: vw(16);
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  // .editing-main__radios
+  &__radios {
+  }
+}

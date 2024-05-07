@@ -1,0 +1,27 @@
+@use "../../variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.input {
+  inline-size: 100%;
+  block-size: vw(56);
+  padding-inline: vw(16);
+  font-size: vw(14);
+  background-color: variables.$color-white;
+  border: vw(0.5) solid rgba(117, 101, 125, 0.2);
+  border-radius: vw(10);
+
+  &:disabled {
+    background-color: #f5f5f5;
+  }
+
+  // .input--flex
+  &--flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: vw(16);
+  }
+}

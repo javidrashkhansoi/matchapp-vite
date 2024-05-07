@@ -47,6 +47,7 @@ export default defineConfig({
         pages: resolve(__dirname, "pages.html"),
         "find-people": resolve(__dirname, "find-people/index.html"),
         person: resolve(__dirname, "person/index.html"),
+        "profile-editing": resolve(__dirname, "profile-editing/index.html"),
       },
     },
   },
