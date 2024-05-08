@@ -5,6 +5,10 @@
 }
 
 .dialog {
+  --button-width: fit-content;
+  --button-height: #{vw(40)};
+  --button-padding: #{vw(16)};
+
   position: fixed;
   inset: 0;
   z-index: 150;
@@ -80,13 +84,127 @@
 
   // .dialog__button
   &__button {
-    --button-width: fit-content;
-    --button-height: #{vw(40)};
-    --button-padding: #{vw(16)};
-
     // .dialog__button--red
     &--red {
       --button-color: #f00;
     }
+  }
+
+  // .dialog__form
+  &__form {
+  }
+}
+
+.dialog-form {
+  text-align: start;
+
+  // .dialog-form__item
+  &__item {
+    position: relative;
+    margin-block-end: vw(24);
+
+    &:first-child {
+      margin-block-end: vw(48);
+    }
+
+    &:has(.error) {
+      &::after {
+        content: attr(data-error);
+        position: absolute;
+        inset-block-start: calc(100% + #{vw(8)});
+        inset-inline-start: 0;
+        inline-size: 100%;
+        font-size: vw(12);
+        line-height: 1.35;
+        color: #f00;
+        pointer-events: none;
+      }
+    }
+  }
+
+  // .dialog-form__select
+  &__select {
+  }
+
+  // .dialog-form__selects
+  &__selects {
+  }
+
+  // .dialog-form__label
+  &__label {
+    display: block;
+    margin-block-end: vw(8);
+    font-weight: 700;
+    font-size: vw(18);
+    line-height: 1.2;
+  }
+
+  // .dialog-form__textarea
+  &__textarea {
+    inline-size: 100%;
+    min-block-size: vw(267);
+    max-block-size: vw(500);
+    padding: vw(16);
+    font-size: vw(14);
+    border: vw(0.5) solid rgba(117, 101, 125, 0.2);
+    border-radius: vw(10);
+
+    &::placeholder {
+      color: rgba(6, 6, 6, 0.4);
+      opacity: 1;
+    }
+
+    &.error {
+      border-color: #f00;
+    }
+  }
+
+  // .dialog-form__button
+  &__button {
+    margin-inline-start: auto;
+  }
+}
+
+.dialog-selects {
+  position: absolute;
+  inset-block: 0;
+  inset-inline: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  inline-size: 100%;
+  block-size: 100%;
+  padding-block: vw(32) vw(24);
+  padding-inline: vw(16);
+  background-color: variables.$color-white;
+  border-radius: vw(10);
+  overflow-x: hidden;
+  overflow: auto;
+
+  &:not(&--show) {
+    visibility: hidden;
+  }
+
+  // .dialog-selects--show
+  &--show {
+  }
+
+  // .dialog-selects__label
+  &__label {
+    margin-block-end: vw(12);
+    font-weight: 600;
+    font-size: vw(14);
+  }
+
+  // .dialog-selects__radios
+  &__radios {
+    flex: 1 1 auto;
+    margin-block-end: vw(24);
+  }
+
+  // .dialog-selects__button
+  &__button {
+    --button-width: fit-content;
+    margin-inline-start: auto;
   }
 }

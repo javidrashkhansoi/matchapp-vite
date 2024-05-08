@@ -1,0 +1,67 @@
+@use "../../variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.support {
+  padding-block: vw(20) vw(24);
+  text-align: center;
+
+  // .support__container
+  &__container {
+    > *:not(:last-child) {
+      margin-block-end: vw(24);
+    }
+  }
+
+  // .support__button
+  &__button {
+  }
+
+  // .support__dialog
+  &__dialog {
+  }
+
+  // .support__text
+  &__text {
+    color: rgba(117, 101, 125, 0.4);
+
+    a {
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+    }
+  }
+}
+
+.support-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: vw(6);
+  inline-size: 100%;
+  min-block-size: vw(40);
+  padding-block: vw(5);
+  padding-inline: vw(16);
+  font-weight: 500;
+  font-size: vw(14);
+  color: variables.$color-theme;
+  background-color: variables.$color-white;
+  box-shadow: vw(1) vw(1) vw(5) 0 rgba(117, 101, 125, 0.15);
+  border-radius: vw(20);
+
+  // .support-button__icon
+  &__icon {
+    flex: 0 0 auto;
+    font-size: 0;
+
+    svg {
+      width: vw(16);
+      height: vw(16);
+    }
+  }
+
+  // .support-button__text
+  &__text {
+  }
+}

@@ -12,8 +12,8 @@
 
   // .hashtags__item
   &__item {
-    &:not(:last-child) {
-      margin-block-end: vw(16);
+    &:not(:first-child) {
+      margin-block-start: vw(16);
     }
 
     .has-more:not(.has-more--show) & {
@@ -37,6 +37,15 @@
 
     inline-size: fit-content;
     margin-block-end: vw(4);
+    color: variables.$color-theme;
+  }
+
+  // .hashtags__caption
+  &__caption {
+    margin-block-end: vw(8);
+    font-weight: 600;
+    font-size: vw(14);
+    line-height: 1.2;
     color: variables.$color-theme;
   }
 

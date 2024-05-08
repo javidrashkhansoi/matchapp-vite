@@ -1,0 +1,64 @@
+@use "../../variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.youare {
+  // .youare__list
+  &__list {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    row-gap: vw(6);
+    column-gap: vw(8);
+  }
+
+  // .youare__item
+  &__item {
+    display: contents;
+
+    @supports (grid-template-columns: subgrid) {
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-column: 1 / -1;
+      align-items: center;
+    }
+  }
+
+  // .youare__percent
+  &__percent {
+    font-weight: 500;
+    font-size: vw(16);
+    line-height: 1;
+  }
+
+  // .youare__diagram
+  &__diagram {
+    position: relative;
+    block-size: vw(10);
+    background-color: #f9f9f9;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset-block: 0;
+      inset-inline-end: 0;
+      z-index: 1;
+      inline-size: var(--youare-progress);
+      block-size: 100%;
+      background-color: var(--youare-background-color);
+    }
+  }
+
+  // .youare__label
+  &__label {
+    font-weight: 500;
+  }
+
+  // .youare__button
+  &__button {
+    margin-block-start: vw(24);
+    margin-inline: auto;
+  }
+}

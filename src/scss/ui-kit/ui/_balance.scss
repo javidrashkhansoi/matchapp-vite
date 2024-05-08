@@ -1,0 +1,62 @@
+@use "../../variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.balance {
+  padding-block: vw(24);
+  padding-inline: vw(12);
+  color: variables.$color-white;
+  background-color: variables.$color-theme;
+  border-radius: vw(6);
+
+  // .balance__top
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: vw(17);
+    padding-block-end: vw(16);
+    border-block-end: vw(0.5) solid rgba(255, 255, 255, 0.2);
+  }
+
+  // .balance__caption
+  &__caption {
+  }
+
+  // .balance__title
+  &__title {
+    margin-block-end: vw(8);
+    font-size: vw(14);
+    line-height: 0.99;
+  }
+
+  // .balance__reports
+  &__reports {
+    font-weight: 700;
+    font-size: vw(22);
+    line-height: 1;
+    color: #ace39c;
+  }
+
+  // .balance__button
+  &__button {
+    flex: 0 0 auto;
+  }
+
+  // .balance__bottom
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: vw(17);
+    padding-block-start: vw(16);
+  }
+
+  // .balance__text
+  &__text {
+    font-size: vw(14);
+    line-height: 1.35;
+  }
+}

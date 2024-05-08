@@ -2,7 +2,7 @@ import "./style.scss";
 import { HeaderObservers } from "../js/header-observers.js";
 
 const main = document.querySelector("main");
-const inactiveLink = "\" href=\"#\"";
+const inactiveLink = /** @param {string} link */ link => `" href=\"${link}"`;
 const activeLink = " nav-link--active\" href=\"\" aria-current=\"page\"";
 
 /**
@@ -15,7 +15,7 @@ function header(page) {
     <nav class="header__nav header-nav" aria-label="Main navigation">
       <ul class="header-nav__list">
         <li class="header-nav__item">
-          <a class="header-nav__link nav-link${page === "home" ? activeLink : inactiveLink}>
+          <a class="header-nav__link nav-link${page === "home" ? activeLink : inactiveLink("#")}>
             <span class="nav-link__icon ibg">
               <img src="/matchapp-vite/images/icons/header/home${page === "home" ? "-active" : ""}.svg" alt="#">
             </span>
@@ -23,7 +23,7 @@ function header(page) {
           </a>
         </li>
         <li class="header-nav__item">
-          <a class="header-nav__link nav-link${page === "people" ? activeLink : inactiveLink}>
+          <a class="header-nav__link nav-link${page === "people" ? activeLink : inactiveLink("#")}>
             <span class="nav-link__icon ibg">
               <img src="/matchapp-vite/images/icons/header/people${page === "people" ? "-active" : ""}.svg" alt="#">
             </span>
@@ -31,7 +31,7 @@ function header(page) {
           </a>
         </li>
         <li class="header-nav__item">
-          <a class="header-nav__link nav-link${page === "discover" ? activeLink : inactiveLink}>
+          <a class="header-nav__link nav-link${page === "discover" ? activeLink : inactiveLink("/matchapp-vite/find-people/")}>
             <span class="nav-link__icon ibg">
               <img src="/matchapp-vite/images/icons/header/discover${page === "discover" ? "-active" : ""}.svg" alt="#">
             </span>
@@ -39,7 +39,7 @@ function header(page) {
           </a>
         </li>
         <li class="header-nav__item">
-          <a class="header-nav__link nav-link${page === "profile" ? activeLink : inactiveLink}>
+          <a class="header-nav__link nav-link${page === "profile" ? activeLink : inactiveLink("/matchapp-vite/profile/")}>
             <span class="nav-link__icon ibg">
               <img src="/matchapp-vite/images/icons/header/profile${page === "profile" ? "-active" : ""}.svg" alt="#">
             </span>

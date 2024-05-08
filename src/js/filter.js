@@ -4,6 +4,7 @@ const filterTriggers = document.querySelectorAll("[data-filter-trigger]");
 filterTriggers.forEach(trigger => {
   const { dataset } = trigger;
   const { filterTrigger } = dataset;
+  /** @type {HTMLElement} */
   const filter = document.querySelector(`[data-filter="${filterTrigger}"]`);
 
   if (filter) {

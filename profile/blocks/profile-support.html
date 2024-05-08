@@ -1,0 +1,90 @@
+<section class="support">
+  <div class="support__container container">
+    <button class="support__button support-button" data-dialog-trigger="support">
+      <span class="support-button__icon" aria-hidden="true">
+        <svg width="16" height="16">
+          <use xlink:href="#support"></use>
+        </svg>
+      </span>
+      <span class="support-button__text">Support</span>
+    </button>
+    <p class="support__text">
+      <a href="#">User agreement</a>&#32;and&#32;<a href="#">privacy policy</a>
+    </p>
+    <div class="support__dialog dialog dialog" data-dialog="support">
+      <div class="dialog__inner">
+        <button class="dialog__close">
+          <svg width="16" height="16" aria-hidden="true">
+            <use xlink:href="#remove"></use>
+          </svg>
+        </button>
+        <form class="dialog__form dialog-form" id="dialog-form" action="#">
+          <div class="dialog-form__item" data-error="Please, select a subject of your request">
+            <button class="dialog-form__select select-button" type="button">
+              <span class="select-button__text">Subject*</span>
+              <span class="select-button__icon" aria-hidden="true">
+                <svg width="10" height="6">
+                  <use xlink:href="#down"></use>
+                </svg>
+              </span>
+            </button>
+          </div>
+          <fieldset class="dialog-form__selects dialog-selects">
+            <legend class="visually-hidden">Select the subject of your message</legend>
+            <div class="dialog-selects__label" aria-hidden="true">Select the subject of your message</div>
+            <div class="dialog-selects__radios radios">
+              <div class="radios__item radio">
+                <label class="radio__label" for="dialog-selects-app">
+                  <span class="radio__icon"></span>
+                  <span class="radio__text">Some problems with app</span>
+                </label>
+                <input class="radio__input visually-hidden" id="dialog-selects-app" name="dialog-selects" type="radio" value="#" required>
+              </div>
+              <div class="radios__item radio">
+                <label class="radio__label" for="dialog-selects-issues">
+                  <span class="radio__icon"></span>
+                  <span class="radio__text">Payments and bonuses issues</span>
+                </label>
+                <input class="radio__input visually-hidden" id="dialog-selects-issues" name="dialog-selects" type="radio" value="#" required>
+              </div>
+              <div class="radios__item radio">
+                <label class="radio__label" for="dialog-selects-suggestion">
+                  <span class="radio__icon"></span>
+                  <span class="radio__text">Feedback or suggestion</span>
+                </label>
+                <input class="radio__input visually-hidden" id="dialog-selects-suggestion" name="dialog-selects" type="radio" value="#" required>
+              </div>
+              <div class="radios__item radio">
+                <label class="radio__label" for="dialog-selects-requests">
+                  <span class="radio__icon"></span>
+                  <span class="radio__text">Feature requests</span>
+                </label>
+                <input class="radio__input visually-hidden" id="dialog-selects-requests" name="dialog-selects" type="radio" value="#" required>
+              </div>
+              <div class="radios__item radio">
+                <label class="radio__label" for="dialog-selects-behavior">
+                  <span class="radio__icon"></span>
+                  <span class="radio__text">Сlaim inappropriate behavior</span>
+                </label>
+                <input class="radio__input visually-hidden" id="dialog-selects-behavior" name="dialog-selects" type="radio" value="#" required>
+              </div>
+              <div class="radios__item radio">
+                <label class="radio__label" for="dialog-selects-Other">
+                  <span class="radio__icon"></span>
+                  <span class="radio__text">Other</span>
+                </label>
+                <input class="radio__input visually-hidden" id="dialog-selects-Other" name="dialog-selects" type="radio" value="#" required>
+              </div>
+            </div>
+            <button class="dialog-selects__button button" type="button">Save</button>
+          </fieldset>
+          <div class="dialog-form__item" data-error="Please, select a subject of your request">
+            <label class="dialog-form__label" for="dialog-form-textarea">Your message</label>
+            <textarea class="dialog-form__textarea" id="dialog-form-textarea" name="dialog-form-textarea" placeholder="How can we help you?*" required></textarea>
+          </div>
+          <button class="dialog-form__button button">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

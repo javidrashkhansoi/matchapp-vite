@@ -1,0 +1,38 @@
+@use "../../variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.report-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: vw(6);
+  inline-size: fit-content;
+  min-block-size: vw(24);
+  padding-block: vw(5);
+  padding-inline: vw(16);
+  font-weight: 500;
+  text-align: center;
+  color: variables.$color-theme;
+  background-color: variables.$color-white;
+  box-shadow: vw(1) vw(1) vw(5) 0 rgba(117, 101, 125, 0.15);
+  border-radius: vw(30);
+
+  // .report-button__text
+  &__text {
+  }
+
+  // .report-button__icon
+  &__icon {
+    flex: 0 0 auto;
+    font-size: 0;
+    transform: rotate(-90deg);
+
+    svg {
+      width: vw(10);
+      height: vw(6);
+    }
+  }
+}

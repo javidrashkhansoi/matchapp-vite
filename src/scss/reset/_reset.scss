@@ -148,3 +148,15 @@ input {
   background: none;
   caret-color: currentColor;
 }
+
+textarea {
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background: none;
+  caret-color: currentColor;
+  resize: vertical;
+}

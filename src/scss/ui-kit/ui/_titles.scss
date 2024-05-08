@@ -8,4 +8,9 @@
   font-size: vw(18);
   line-height: 1;
   text-align: center;
+
+  // .title-h2__bold
+  &__bold {
+    font-weight: 700;
+  }
 }

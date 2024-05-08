@@ -31,7 +31,7 @@
 
     svg {
       width: calc((var(--actions-icon-width, 17) * 100 / 375) * 1vw);
-      height: vw(17);
+      height: calc((var(--actions-icon-height, 17) * 100 / 375) * 1vw);
     }
   }
 }

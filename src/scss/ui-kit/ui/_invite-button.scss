@@ -1,0 +1,37 @@
+@use "../../variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.invite-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: vw(6);
+  min-block-size: vw(40);
+  padding-block: vw(5);
+  padding-inline: vw(16);
+  font-weight: 500;
+  font-size: vw(14);
+  color: variables.$color-white;
+  background-color: variables.$color-theme;
+  box-shadow: vw(1) vw(1) vw(5) 0 rgba(117, 101, 125, 0.15);
+  border: vw(0.5) solid;
+  border-radius: vw(20);
+
+  // .invite-button__text
+  &__text {
+  }
+
+  // .invite-button__icon
+  &__icon {
+    flex: 0 0 auto;
+    font-size: 0;
+
+    svg {
+      width: vw(10);
+      height: vw(10);
+    }
+  }
+}
