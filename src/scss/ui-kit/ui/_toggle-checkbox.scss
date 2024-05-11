@@ -15,8 +15,24 @@
     line-height: 1;
   }
 
+  // .checkbox-toggle__inner
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    row-gap: vw(3);
+    flex: 1 1 auto;
+  }
+
   // .checkbox-toggle__text
   &__text {
+  }
+
+  // .checkbox-toggle__caption
+  &__caption {
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: rgba(117, 101, 125, 0.6);
   }
 
   // .checkbox-toggle__icon

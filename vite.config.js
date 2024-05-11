@@ -50,6 +50,7 @@ export default defineConfig({
         "profile-editing": resolve(__dirname, "profile-editing/index.html"),
         profile: resolve(__dirname, "profile/index.html"),
         invite: resolve(__dirname, "invite/index.html"),
+        payment: resolve(__dirname, "payment/index.html"),
       },
     },
   },

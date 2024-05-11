@@ -1,0 +1,49 @@
+@use "../../variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.slider {
+  // .slider__inner
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: vw(8);
+  }
+
+  // .slider__item
+  &__item {
+  }
+
+  // .slider__pagination
+  &__pagination {
+    margin-block-start: vw(13);
+  }
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: vw(5);
+  column-gap: vw(10);
+  padding-inline: vw(16);
+  font-size: 0;
+
+  // .pagination__item
+  &__item {
+    flex: 0 0 auto;
+    inline-size: vw(9);
+    aspect-ratio: 1 / 1;
+    background-color: rgba(117, 101, 125, 0.2);
+    border-radius: 50%;
+
+    // .pagination__item--active
+    &--active {
+      background-color: variables.$color-theme;
+    }
+  }
+}

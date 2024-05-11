@@ -3,4 +3,9 @@
   display: flex;
   flex-direction: column;
   min-block-size: 100%;
+
+  // .wrapper--hidden
+  &--hidden {
+    overflow: hidden;
+  }
 }

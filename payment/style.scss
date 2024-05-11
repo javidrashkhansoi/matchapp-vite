@@ -1,0 +1,328 @@
+@use "../src/scss/variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.payment {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding-block: vw(48);
+
+  // .payment__container
+  &__container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    inline-size: 100%;
+  }
+
+  // .payment__form
+  &__form {
+  }
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  row-gap: vw(48);
+
+  // .payment-form__top
+  &__top {
+    position: relative;
+    isolation: isolate;
+    flex: 1 1 auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset-block-start: 0;
+      inset-inline-start: vw(-12);
+      z-index: -2;
+      inline-size: vw(268);
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      background-color: #cde0f8;
+      filter: blur(vw(50));
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset-block-end: vw(35);
+      inset-inline-end: 0;
+      z-index: -1;
+      inline-size: vw(268);
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      background-color: #c4bcf2;
+      filter: blur(vw(50));
+    }
+  }
+
+  // .payment-form__title
+  &__title {
+    margin-block-end: vw(16);
+    font-weight: 700;
+    font-size: vw(18);
+    line-height: 1.4;
+    text-align: center;
+    color: variables.$color-theme;
+  }
+
+  // .payment-form__text
+  &__text {
+    margin-block-end: vw(67);
+    font-size: vw(14);
+    line-height: 1.35;
+    text-align: center;
+  }
+
+  // .payment-form__slider
+  &__slider {
+    margin-block-end: vw(64);
+    margin-inline: vw(-16);
+    padding-inline: vw(16);
+  }
+
+  // .payment-form__method
+  &__method {
+  }
+
+  // .payment-form__bottom
+  &__bottom {
+  }
+
+  // .payment-form__toggle
+  &__toggle {
+    margin-block-end: vw(19);
+  }
+
+  // .payment-form__proceed
+  &__proceed {
+  }
+}
+
+@mixin slider-radio {
+  .payment-radio:has(.payment-radio__input:checked) & {
+    @content;
+  }
+}
+
+.payment-radio {
+  flex: 0 0 auto;
+
+  // .payment-radio__label
+  &__label {
+  }
+
+  // .payment-radio__input
+  &__input {
+  }
+}
+
+.payment-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: vw(1.5);
+  inline-size: vw(112);
+  aspect-ratio: 112 / 108;
+  padding: vw(16);
+  text-align: center;
+  background-color: variables.$color-white;
+  border: vw(0.5) solid rgba(117, 101, 125, 0.2);
+  border-radius: vw(10);
+  overflow: hidden;
+
+  @include slider-radio() {
+    row-gap: vw(2);
+    inline-size: vw(152);
+    aspect-ratio: 152 / 132;
+    padding-block: vw(20);
+    border: vw(1) solid variables.$color-theme;
+  }
+
+  // .payment-card__top
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: vw(2);
+    flex: 1 1 auto;
+    font-size: vw(18);
+
+    @include slider-radio() {
+      font-size: vw(22);
+    }
+  }
+
+  // .payment-card__count
+  &__count {
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  // .payment-card__text
+  &__text {
+    line-height: 1;
+  }
+
+  // .payment-card__bottom
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: vw(1.5);
+    line-height: 1.2;
+
+    @include slider-radio() {
+      row-gap: vw(2);
+    }
+  }
+
+  // .payment-card__price
+  &__price {
+    font-weight: 700;
+
+    color: variables.$color-theme;
+
+    @include slider-radio() {
+      font-size: vw(16);
+    }
+  }
+
+  // .payment-card__badge
+  &__badge {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-block-size: vw(16);
+    padding-block: vw(3);
+    padding-inline: vw(7);
+    font-weight: 600;
+    font-size: vw(8);
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: variables.$color-theme;
+    background-color: #efe6ff;
+    border-end-end-radius: vw(6);
+
+    @include slider-radio() {
+      min-block-size: vw(19);
+      padding-inline: vw(8);
+      font-size: vw(10);
+    }
+
+    // .payment-card__badge--green
+    &--green {
+      color: #109d37;
+      background-color: #daf5de;
+    }
+  }
+
+  // .payment-card__old
+  &__old {
+    text-decoration: line-through;
+    color: #75657d;
+  }
+}
+
+.payment-method {
+  // .payment-method__radio
+  &__radio {
+    &:not(:last-child) {
+      margin-block-end: vw(8);
+    }
+  }
+}
+
+.method-radio {
+  // .method-radio__label
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: vw(16);
+    padding-block: vw(12);
+    padding-inline: vw(16);
+    font-size: vw(14);
+    line-height: 1.2;
+    background-color: variables.$color-white;
+    border: vw(0.5) solid rgba(117, 101, 125, 0.2);
+    border-radius: vw(10);
+
+    .method-radio:has(.method-radio__input:checked) & {
+      border: vw(1) solid variables.$color-theme;
+    }
+  }
+
+  // .method-radio__text
+  &__text {
+  }
+
+  // .method-radio__icon
+  &__icon {
+    flex: 0 0 auto;
+    font-size: 0;
+    color: variables.$color-theme;
+
+    svg {
+      width: vw(32);
+      height: vw(32);
+    }
+  }
+
+  // .method-radio__input
+  &__input {
+  }
+}
+
+.payment-proceed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: vw(16);
+
+  // .payment-proceed__sum
+  &__sum {
+    line-height: 1.2;
+  }
+
+  // .payment-proceed__label
+  &__label {
+    margin-block-end: vw(4);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: rgba(117, 101, 125, 0.6);
+  }
+
+  // .payment-proceed__prices
+  &__prices {
+    display: flex;
+    align-items: center;
+    column-gap: vw(4);
+  }
+
+  // .payment-proceed__price
+  &__price {
+    font-size: vw(14);
+
+    // .payment-proceed__price--old
+    &--old {
+      text-decoration: line-through;
+      color: rgba(117, 101, 125, 0.6);
+    }
+  }
+
+  // .payment-proceed__button
+  &__button {
+  }
+}

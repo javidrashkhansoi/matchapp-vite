@@ -1,0 +1,114 @@
+<section class="payment">
+  <div class="payment__container container">
+    <form class="payment__form payment-form" id="payment-form" action="#">
+      <div class="payment-form__top">
+        <h1 class="payment-form__title">Get Reports</h1>
+        <p class="payment-form__text">
+          Save money by purchasing a report package, to uncover compatibility and personality details of potential partners
+        </p>
+        <div class="payment-form__slider slider">
+          <div class="slider__inner">
+            <div class="slider__item payment-radio">
+              <label class="payment-radio__label payment-card" for="payment-radio-1">
+                <span class="payment-card__top">
+                  <span class="payment-card__count">1</span>
+                  <span class="payment-card__text">report</span>
+                </span>
+                <span class="payment-card__bottom">
+                  <span class="payment-card__price">per $9</span>
+                </span>
+              </label>
+              <input class="payment-radio__input visually-hidden" id="payment-radio-1" name="payment-radio" type="radio" value="#">
+            </div>
+            <div class="slider__item payment-radio">
+              <label class="payment-radio__label payment-card" for="payment-radio-5">
+                <span class="payment-card__badge">Most popular</span>
+                <span class="payment-card__top">
+                  <span class="payment-card__count">5</span>
+                  <span class="payment-card__text">reports</span>
+                </span>
+                <span class="payment-card__bottom">
+                  <span class="payment-card__old">$9</span>
+                  <span class="payment-card__price">per $5</span>
+                </span>
+              </label>
+              <input class="payment-radio__input visually-hidden" id="payment-radio-5" name="payment-radio" type="radio" value="#" checked>
+            </div>
+            <div class="slider__item payment-radio">
+              <label class="payment-radio__label payment-card" for="payment-radio-20">
+                <span class="payment-card__badge payment-card__badge--green">Best value</span>
+                <span class="payment-card__top">
+                  <span class="payment-card__count">20</span>
+                  <span class="payment-card__text">reports</span>
+                </span>
+                <span class="payment-card__bottom">
+                  <span class="payment-card__old">$9</span>
+                  <span class="payment-card__price">per $2.5</span>
+                </span>
+              </label>
+              <input class="payment-radio__input visually-hidden" id="payment-radio-20" name="payment-radio" type="radio" value="#">
+            </div>
+          </div>
+          <div class="slider__pagination pagination">
+            <span class="pagination__item"></span>
+            <span class="pagination__item pagination__item--active"></span>
+            <span class="pagination__item"></span>
+          </div>
+        </div>
+        <div class="payment-form__method payment-method">
+          <div class="payment-method__radio method-radio">
+            <label class="method-radio__label" for="method-radio-card">
+              <span class="method-radio__text">Pay with bank card</span>
+              <span class="method-radio__icon">
+                <svg width="32" height="32" aria-hidden="true">
+                  <use xlink:href="#card"></use>
+                </svg>
+              </span>
+            </label>
+            <input class="method-radio__input visually-hidden" id="method-radio-card" name="method-radio" type="radio" value="#" checked>
+          </div>
+          <div class="payment-method__radio method-radio">
+            <label class="method-radio__label" for="method-radio-crypto">
+              <span class="method-radio__text">Pay with crypto</span>
+              <span class="method-radio__icon">
+                <svg width="32" height="32" aria-hidden="true">
+                  <use xlink:href="#crypto"></use>
+                </svg>
+              </span>
+            </label>
+            <input class="method-radio__input visually-hidden" id="method-radio-crypto" name="method-radio" type="radio" value="#">
+          </div>
+        </div>
+      </div>
+      <div class="payment-form__bottom">
+        <div class="payment-form__toggle checkbox-toggle">
+          <label class="checkbox-toggle__label" for="balance">
+            <span class="checkbox-toggle__icon" aria-hidden="true"></span>
+            <span class="checkbox-toggle__inner">
+              <span class="checkbox-toggle__text">Use my balance for payment</span>
+              <span class="checkbox-toggle__caption">2 reports available</span>
+            </span>
+          </label>
+          <input class="checkbox-toggle__input visually-hidden" id="balance" name="balance" type="checkbox" value="#">
+        </div>
+        <div class="payment-form__proceed payment-proceed">
+          <div class="payment-proceed__sum">
+            <div class="payment-proceed__label">Payable amount</div>
+            <div class="payment-proceed__prices">
+              <div class="payment-proceed__price payment-proceed__price--old">$25</div>
+              <div class="payment-proceed__price">$15</div>
+            </div>
+          </div>
+          <button class="payment-proceed__button step-button">
+            <span class="step-button__text">Proceed to payment</span>
+            <span class="step-button__icon" aria-hidden="true">
+              <svg width="6" height="10">
+                <use xlink:href="#back"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
