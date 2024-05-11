@@ -1,0 +1,45 @@
+<section class="profile-create">
+  <h1 class="profile-create__title">Answer questions</h1>
+  <div class="profile-create__progress" style="--create-progress: calc(6 / 9 * 100%);">AI will find you perfect match</div>
+  <form class="profile-create__form create-form" id="create-form" action="#">
+    <div class="create-form__inner">
+      <div class="create-form__item create-form__item--padding">
+        <div class="create-form__label">Where do you prefer to live</div>
+        <div class="create-form__radios radios">
+          <load src="profile-create/blocks/radios.html" id="In a big city" name="live" checked="checked" />
+          <load src="profile-create/blocks/radios.html" id="In the suburbs" name="live" checked="" />
+          <load src="profile-create/blocks/radios.html" id="Far away from people" name="live" checked="" />
+        </div>
+      </div>
+      <div class="create-form__item create-form__item--padding">
+        <div class="create-form__label">Ideal vacation</div>
+        <div class="create-form__radios radios">
+          <load src="profile-create/blocks/radios.html" id="Organized tour" name="vacation" checked="checked" />
+          <load src="profile-create/blocks/radios.html" id="All-inclusive hotel" name="vacation" checked="" />
+          <load src="profile-create/blocks/radios.html" id="Backpacking adventure" name="vacation" checked="" />
+          <load src="profile-create/blocks/radios.html" id="By the sea" name="vacation" checked="checked" />
+          <load src="profile-create/blocks/radios.html" id="Active leisure" name="vacation" checked="" />
+          <load src="profile-create/blocks/radios.html" id="Museums, local attractions" name="vacation" checked="" />
+        </div>
+      </div>
+    </div>
+    <div class="create-form__buttons">
+      <button class="create-form__button step-button step-button--back" type="button">
+        <span class="step-button__icon" aria-hidden="true">
+          <svg width="6" height="10">
+            <use xlink:href="#back"></use>
+          </svg>
+        </span>
+        <span class="step-button__text">Back</span>
+      </button>
+      <button class="create-form__button step-button" type="button">
+        <span class="step-button__text">Next</span>
+        <span class="step-button__icon" aria-hidden="true">
+          <svg width="6" height="10">
+            <use xlink:href="#back"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </form>
+</section>

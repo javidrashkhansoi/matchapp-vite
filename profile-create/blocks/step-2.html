@@ -1,0 +1,62 @@
+<section class="profile-create">
+  <h1 class="profile-create__title">Personal data</h1>
+  <div class="profile-create__progress" style="--create-progress: calc(2 / 9 * 100%);">Let AI to know you better</div>
+  <form class="profile-create__form create-form" id="create-form" action="#">
+    <div class="create-form__inner">
+      <div class="create-form__item">
+        <div class="create-form__input">
+          <input class="input" id="create-form-name" name="create-form-name" type="text" inputmode="text" placeholder="Name*" required>
+        </div>
+      </div>
+      <div class="create-form__item">
+        <div class="create-form__date">
+          <label class="create-date" for="create-form-date">
+            <span class="visually-hidden">#</span>
+            <span class="create-date__input input input--flex" aria-hidden="true">
+              <span class="create-date__text">Date of birth*</span>
+              <span class="create-date__icon" aria-hidden="true">
+                <svg width="24" height="24">
+                  <use xlink:href="#calendar"></use>
+                </svg>
+              </span>
+            </span>
+          </label>
+          <input class="create-form__calendar" id="create-form-date" name="create-form-date" type="date" required>
+        </div>
+        <p class="create-form__text">
+          we don't show your exact birth date in the profile. It's used for our AI algorithms to uplift quality of your matches.
+        </p>
+      </div>
+      <div class="create-form__item">
+        <div class="create-form__radios radios radios--flex">
+          <load src="profile-create/blocks/radios.html" id="Man" name="gender" checked="checked" />
+          <load src="profile-create/blocks/radios.html" id="Woman" name="gender" checked="" />
+          <load src="profile-create/blocks/radios.html" id="Other" name="gender" checked="" />
+        </div>
+      </div>
+      <div class="create-form__item">
+        <div class="create-form__input">
+          <input class="input" id="create-form-city" name="create-form-city" type="text" inputmode="text" placeholder="City*" required>
+        </div>
+      </div>
+    </div>
+    <div class="create-form__buttons">
+      <button class="create-form__button step-button step-button--back" type="button">
+        <span class="step-button__icon" aria-hidden="true">
+          <svg width="6" height="10">
+            <use xlink:href="#back"></use>
+          </svg>
+        </span>
+        <span class="step-button__text">Back</span>
+      </button>
+      <button class="create-form__button step-button" type="button" disabled>
+        <span class="step-button__text">Next</span>
+        <span class="step-button__icon" aria-hidden="true">
+          <svg width="6" height="10">
+            <use xlink:href="#back"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </form>
+</section>

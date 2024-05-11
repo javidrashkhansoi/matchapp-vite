@@ -1,0 +1,47 @@
+<section class="profile-create">
+  <h1 class="profile-create__title">Choose an option</h1>
+  <div class="profile-create__progress" style="--create-progress: calc(7 / 9 * 100%);">AI will find you perfect match</div>
+  <form class="profile-create__form create-form" id="create-form" action="#">
+    <div class="create-form__inner">
+      <div class="create-form__item create-form__item--padding">
+        <div class="create-form__label">Where do you prefer to eat?</div>
+        <div class="create-form__radios radios">
+          <load src="profile-create/blocks/radios.html" id="Street food" name="eat" checked="checked" />
+          <load src="profile-create/blocks/radios.html" id="A fancy restaurant" name="eat" checked="" />
+        </div>
+      </div>
+      <div class="create-form__item create-form__item--padding">
+        <div class="create-form__label">What do you prefer to visit?</div>
+        <div class="create-form__radios radios">
+          <load src="profile-create/blocks/radios.html" id="Beach" name="visit" checked="checked" />
+          <load src="profile-create/blocks/radios.html" id="Museum" name="visit" checked="" />
+        </div>
+      </div>
+      <div class="create-form__item create-form__item--padding">
+        <div class="create-form__label">After work</div>
+        <div class="create-form__radios radios">
+          <load src="profile-create/blocks/radios.html" id="Meeting friends" name="work" checked="checked" />
+          <load src="profile-create/blocks/radios.html" id="Dinner at home" name="work" checked="" />
+        </div>
+      </div>
+    </div>
+    <div class="create-form__buttons">
+      <button class="create-form__button step-button step-button--back" type="button">
+        <span class="step-button__icon" aria-hidden="true">
+          <svg width="6" height="10">
+            <use xlink:href="#back"></use>
+          </svg>
+        </span>
+        <span class="step-button__text">Back</span>
+      </button>
+      <button class="create-form__button step-button" type="button">
+        <span class="step-button__text">Next</span>
+        <span class="step-button__icon" aria-hidden="true">
+          <svg width="6" height="10">
+            <use xlink:href="#back"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </form>
+</section>

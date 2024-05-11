@@ -10,6 +10,13 @@
     &:not(:last-child) {
       margin-block-end: vw(16);
     }
+
+    // .feedback__item--mb-36
+    &--mb-36 {
+      &:not(:last-child) {
+        margin-block-end: vw(36);
+      }
+    }
   }
 
   // .feedback__rate

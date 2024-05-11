@@ -1,0 +1,37 @@
+<section class="profile-create">
+  <h1 class="profile-create__title">Goals</h1>
+  <div class="profile-create__progress" style="--create-progress: calc(3 / 9 * 100%);">AI will find you perfect match</div>
+  <form class="profile-create__form create-form" id="create-form" action="#">
+    <div class="create-form__inner">
+      <div class="create-form__item">
+        <div class="create-form__choices checkboxes">
+          <load src="profile-create/blocks/checkboxes.html" id="Date" name="goals" checked="" />
+          <load src="profile-create/blocks/checkboxes.html" id="Long-term relationship" name="goals" checked="checked" />
+          <load src="profile-create/blocks/checkboxes.html" id="Friendship" name="goals" checked="" />
+          <load src="profile-create/blocks/checkboxes.html" id="Communication" name="goals" checked="" />
+          <load src="profile-create/blocks/checkboxes.html" id="Business partner" name="goals" checked="" />
+          <load src="profile-create/blocks/checkboxes.html" id="Travel partner" name="goals" checked="" />
+          <load src="profile-create/blocks/hide.html" class="checkboxes__item" />
+        </div>
+      </div>
+    </div>
+    <div class="create-form__buttons">
+      <button class="create-form__button step-button step-button--back" type="button">
+        <span class="step-button__icon" aria-hidden="true">
+          <svg width="6" height="10">
+            <use xlink:href="#back"></use>
+          </svg>
+        </span>
+        <span class="step-button__text">Back</span>
+      </button>
+      <button class="create-form__button step-button" type="button">
+        <span class="step-button__text">Next</span>
+        <span class="step-button__icon" aria-hidden="true">
+          <svg width="6" height="10">
+            <use xlink:href="#back"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </form>
+</section>

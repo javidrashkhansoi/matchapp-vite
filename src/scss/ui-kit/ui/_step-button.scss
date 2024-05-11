@@ -18,6 +18,10 @@
   box-shadow: vw(1) vw(1) vw(10) 0 rgba(117, 101, 125, 0.15);
   border-radius: vw(30);
 
+  &:disabled {
+    color: rgba(128, 89, 238, 0.4);
+  }
+
   // .step-button--back
   &--back {
   }

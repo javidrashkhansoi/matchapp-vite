@@ -1,0 +1,11 @@
+<div class="checkboxes__item checkbox">
+  <label class="checkbox__label" for="{=$name}-{=$id}">
+    <span class="checkbox__icon" aria-hidden="true">
+      <svg width="15" height="12">
+        <use xlink:href="#check"></use>
+      </svg>
+    </span>
+    <span class="checkbox__text">{=$id}</span>
+  </label>
+  <input class="checkbox__input visually-hidden" id="{=$name}-{=$id}" name="{=$name}-{=$id}" type="checkbox" value="#" {=$checked}>
+</div>
