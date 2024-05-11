@@ -1,0 +1,103 @@
+@use "../src/scss/variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.invite {
+  padding-block: vw(16) vw(24);
+
+  // .invite__container
+  &__container {
+  }
+
+  // .invite__back
+  &__back {
+    margin-block-end: vw(16);
+  }
+
+  // .invite__inner
+  &__inner {
+  }
+
+  // .invite__profile
+  &__profile {
+    inline-size: fit-content;
+    margin-block-end: vw(24);
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  // .invite__image
+  &__image {
+    inline-size: vw(160);
+    aspect-ratio: 1 / 1;
+    margin-block-end: vw(4);
+    margin-inline: auto;
+    font-size: 0;
+    border-radius: 50%;
+  }
+
+  // .invite__name
+  &__name {
+    margin-block-end: vw(4);
+    font-weight: 500;
+    font-size: vw(22);
+  }
+
+  // .invite__about
+  &__about {
+    color: rgba(117, 101, 125, 0.6);
+  }
+
+  // .invite__qr
+  &__qr {
+    margin-block-end: vw(16);
+  }
+
+  // .invite__text
+  &__text {
+    font-size: vw(14);
+    line-height: 1.35;
+    text-align: center;
+
+    mark {
+      display: inline-block;
+      padding-inline: vw(8);
+      background-color: #ace39c;
+      border-radius: vw(10);
+    }
+
+    > *:not(:last-child) {
+      margin-block-end: vw(10);
+    }
+  }
+}
+
+.invite-qr {
+  // .invite-qr__block
+  &__block {
+    margin-block-end: vw(8);
+    padding-block: vw(8);
+    padding-inline: vw(16);
+    background-color: variables.$color-white;
+    border: vw(0.5) solid rgba(117, 101, 125, 0.2);
+    border-radius: vw(10);
+  }
+
+  // .invite-qr__image
+  &__image {
+    inline-size: vw(224);
+    aspect-ratio: 1 / 1;
+    margin-inline: auto;
+    font-size: 0;
+
+    img {
+      object-fit: contain;
+    }
+  }
+
+  // .invite-qr__button
+  &__button {
+  }
+}

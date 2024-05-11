@@ -1,0 +1,29 @@
+@use "../../variables/variables";
+
+@function vw($unit) {
+  @return calc(($unit * 100 / 375) * 1vw);
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  column-gap: vw(8);
+  padding: vw(8);
+  line-height: 1.35;
+  color: #75657d;
+
+  // .back__icon
+  &__icon {
+    flex: 0 0 auto;
+    font-size: 0;
+
+    svg {
+      width: vw(6);
+      height: vw(10);
+    }
+  }
+
+  // .back__text
+  &__text {
+  }
+}
